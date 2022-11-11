@@ -23,7 +23,7 @@ class TerraformInitialize < TaskHelper
                                      end
 
     if status == 0
-      return { 'stdout': stdout_str }
+      return { 'stdout' => stdout_str }
     else
       raise TaskHelper::Error.new(_(stderr_str), 'terraform/init-error')
     end

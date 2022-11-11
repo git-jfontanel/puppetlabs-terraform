@@ -17,7 +17,7 @@ class TerraformDestroy < TaskHelper
                                        CliHelper.execute("terraform destroy #{cli_opts}")
                                      end
     if status == 0
-      { 'stdout': stdout_str }
+      { 'stdout' => stdout_str }
     else
       raise TaskHelper::Error.new(stderr_str, 'terraform/destroy-error')
     end
